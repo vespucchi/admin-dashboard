@@ -9,6 +9,7 @@
     --nav-font-color: #FFFFFFBF;
     --nav-font-strong: #FFFFFF;
     --nav-line-gap: 16px;
+    --content-border-rad: 10px;
 }
 
 a {
@@ -110,3 +111,62 @@ a {
     align-items: center;
     gap: 24px;
 }
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 2fr;
+    gap: 20px;
+    grid-template-areas: 
+        "check-in check-in check-in meal"
+        "news news news news"
+        "vacation vacation calendar calendar";
+    padding: 24px;
+    background-color: #F3F4F6;
+}
+
+.check-in, .meal, .project-item, .vacation, .calendar {
+    border-radius: var(--content-border-rad);
+}
+
+.check-in {
+    grid-area: check-in;
+}
+
+.meal {
+    grid-area: meal;
+}
+
+.projects {
+    grid-area: news;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    gap: 15px;
+}
+
+.projects .projects-heading {
+    grid-column: 1 / -1;
+    align-self: center;
+    display: flex;
+    gap: 10px;
+}
+
+#project-title {
+    color: #22272F;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.project-item {
+    min-height: 175px;
+}
+
+.vacation {
+    grid-area: vacation;
+}
+
+.calendar {
+    grid-area: calendar;
+}
+

@@ -1,3 +1,43 @@
 * {
     border: solid 1px red;
 }
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.navigation {
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.info, .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: auto;
+}
+
+.nav-menu, .nav-modules, .nav-misc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 24px;
+}

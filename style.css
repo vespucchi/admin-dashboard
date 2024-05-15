@@ -5,19 +5,12 @@
 }
 
 :root {
-    font-family: Roboto,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Roboto", 'Courier New', Courier, monospace;
     --nav-font-color: #BFD3DD;
     --nav-font-strong: #FFFFFF;
     --content-card-bg: #FFFFFF;
     --nav-line-gap: 5px;
     --content-border-rad: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    font-size: inherit;
-    line-height: 24px;
 }
 
 .container {
@@ -40,6 +33,13 @@ a {
     background-blend-mode:lighten;
     color: var(--nav-font-color);
     font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    line-height: 24px;
 }
 
 img.icon-white {
@@ -226,13 +226,16 @@ img.icon-grey {
 .card-data-title {
     line-height: 20px;
     color: #14161A;
-    
 }
 
 .card-data-content, .card-title-text {
     font-size: 20px;
     line-height: 32px;
-    font-weight: 300;
+    font-weight: 600;
+}
+
+.card-data-content {
+    letter-spacing: .1rem;
 }
 
 #details {

@@ -306,6 +306,47 @@ img.icon-grey {
     padding-right: 8px;
 }
 
+.calendar-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 15px;
+}
+
+.calendar-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+}
+
+.calendar-date, .calendar-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    color: #22272F;
+}
+
+.calendar-date {
+    background-color: #F4FAFF;
+    padding: 10px 20px;
+    align-items: center;
+    border-right: solid 1px #BFD3DD;
+    border-radius: inherit;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    color: #003B6B;
+}
+
+.calendar-full-date, .calendar-desc-title {
+    font-weight: bold;
+}
+
+.calendar-more {
+
+}
 
 
 .graph-container {

@@ -142,28 +142,31 @@ img.icon-grey {
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr 2fr;
+    grid-template-rows: 1fr 4fr 2fr;
     gap: 20px;
     grid-template-areas: 
         "check-in check-in check-in meal"
-        "news news news news"
-        "vacation vacation calendar calendar";
+        "projects projects projects projects"
+        "absence absence calendar calendar";
     padding: 24px;
     background-color: #F3F4F6;
 }
 
-.check-in, .meal, .project-item, .vacation, .calendar {
+.card, .check-in, .meal, .project-item, .absence, .calendar {
     border-radius: var(--content-border-rad);
     background-color: var(--content-card-bg);
     filter: drop-shadow(0 0 0.75rem #DDDFE4);
 }
 
 .card {
-    grid-area: check-in;
-    padding: 8px 16px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.check-in {
+    grid-area: check-in;
 }
 
 .meal {
@@ -171,7 +174,7 @@ img.icon-grey {
 }
 
 .projects {
-    grid-area: news;
+    grid-area: projects;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: min-content auto;
@@ -195,8 +198,8 @@ img.icon-grey {
     min-height: 175px;
 }
 
-.vacation {
-    grid-area: vacation;
+.absence {
+    grid-area: absence;
 }
 
 .calendar {
@@ -250,4 +253,95 @@ img.icon-grey {
 
 .card-data-content-blue {
     color: #0C75BB;
+}
+
+.absence .card-data {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+        "graphic days"
+        "graphic days";
+    gap: 32px;
+}
+
+.absence .card-data .card-data-info {
+    grid-area: graphic;
+}
+
+.absence .card-data .card-data-content {
+    grid-area: days;
+}
+
+.absence-days, .other-days {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+}
+
+.day-number {
+    color: #676E79;
+}
+
+.absence .card-data .card-data-info {
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+}
+
+.unused::before {
+    content: url('icons/yellow.svg');
+    padding-right: 8px;
+}
+
+.used::before {
+    content: url('icons/pink.svg');
+    padding-right: 8px;
+}
+
+
+
+.graph-container {
+	position: relative;
+}
+
+.percent {
+	display: block;
+	width: 175px;
+	height: 175px;
+}
+
+.circle {
+	stroke: #FCD34D;
+	fill: none;
+	stroke-width: 4;
+}
+
+.circle:nth-child(2) {
+	stroke: #E11D48;
+    stroke-linecap: round;
+}
+
+.graph-container p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #003B6B;
+	text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.graph-number {
+    font-size: 32px;
+    font-weight: bold;
 }

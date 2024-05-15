@@ -16,6 +16,7 @@ a {
     text-decoration: none;
     color: inherit;
     font-size: inherit;
+    line-height: 24px;
 }
 
 .container {
@@ -25,7 +26,7 @@ a {
 }
 
 .navigation {
-    padding: 24px 18px;
+    padding: 24px 6px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -94,10 +95,20 @@ a {
 }
 
 .nav-item {
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+.nav-item a {
     display: grid;
     grid-template-columns: 1fr 5fr;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+}
+
+.nav-item:hover {
+    background-color: #FFFFFF4D;
 }
 
 .nav-item img {

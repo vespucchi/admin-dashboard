@@ -26,11 +26,11 @@
     justify-content: space-between;
     flex: auto;
     gap: var(--nav-line-gap);
-    background-image: url(img/navbar-bg.png);
-    background-position: center;
-    background-size: cover;
+    /* Photo by saad aslam: https://www.pexels.com/photo/green-modern-high-rise-building-in-milan-italy-17383209/ */
+    background: url(img/bg.png) no-repeat fixed; 
+    background-size: contain;
     background-color: #01416099;
-    background-blend-mode:lighten;
+    background-blend-mode: multiply;
     color: var(--nav-font-color);
     font-size: 16px;
 }
@@ -145,7 +145,7 @@ img.icon-grey {
     gap: 20px;
     grid-template-areas: 
         "check-in check-in check-in meal"
-        "projects projects projects projects"
+        "projects projects projects view-more"
         "absence absence calendar calendar";
     padding: 24px;
     background-color: #F3F4F6;
@@ -195,7 +195,84 @@ img.icon-grey {
 }
 
 .project-item {
-    min-height: 200px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003B6B;
+}
+
+.project-item-desc {
+    color: #676E79;
+}
+
+.project-item-languages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+a.view-project-btn {
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #0C75BB;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+a.view-project-btn:active {
+    box-shadow: inset 0px 0px 10px #FFFFFF4D;
+}
+
+.html::before, .css::before, .js::before, .ts::before,
+.db::before, .vue::before, .react::before, .node::before {
+    padding-right: 8px;
+    vertical-align: middle;
+}
+
+.html::before {
+    content: url('icons/html.png');
+}
+
+.css::before {
+    content: url('icons/css-3.png');
+}
+
+.js::before {
+    content: url('icons/java-script.png');
+}
+
+.ts::before {
+    content: url('icons/typescript.png');
+}
+
+.db::before {
+    content: url('icons/database-storage.png');
+}
+
+.vue::before {
+    content: url('icons/vuejs.png');
+}
+
+.react::before {
+    content: url('icons/react.png');
+}
+
+.node::before {
+    content: url('icons/nodejs.png');
 }
 
 .absence {
@@ -210,10 +287,6 @@ img.icon-grey {
     display: flex;
     gap: 10px;
     align-items: center;
-}
-
-#details {
-    margin-left: auto;
 }
 
 .card-data {
@@ -241,9 +314,14 @@ img.icon-grey {
     letter-spacing: .1rem;
 }
 
-#details {
+.details {
     color: #0C75BB;
     line-height: 28px;
+    margin-left: auto;
+}
+
+.projects .details {
+    padding-right: 10px;
 }
 
 .card-data-info-border {
@@ -296,14 +374,17 @@ img.icon-grey {
 	position: relative;
 }
 
+.unused::before, .used::before {
+    padding-right: 8px;
+    vertical-align: middle;
+}
+
 .unused::before {
     content: url('icons/yellow.svg');
-    padding-right: 8px;
 }
 
 .used::before {
     content: url('icons/pink.svg');
-    padding-right: 8px;
 }
 
 .calendar-info {
@@ -343,11 +424,6 @@ img.icon-grey {
 .calendar-full-date, .calendar-desc-title {
     font-weight: bold;
 }
-
-.calendar-more {
-
-}
-
 
 .graph-container {
 	position: relative;

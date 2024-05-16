@@ -9,7 +9,7 @@
     --nav-font-color: #BFD3DD;
     --nav-font-strong: #FFFFFF;
     --content-card-bg: #FFFFFF;
-    --nav-line-gap: 5px;
+    --nav-line-gap: 16px;
     --content-border-rad: 10px;
 }
 
@@ -24,7 +24,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: auto;
     gap: var(--nav-line-gap);
     /* Photo by saad aslam: https://www.pexels.com/photo/green-modern-high-rise-building-in-milan-italy-17383209/ */
     background: url(img/bg.png) no-repeat fixed; 
